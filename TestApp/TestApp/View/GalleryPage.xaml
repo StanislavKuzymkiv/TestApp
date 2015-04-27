@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TestApp.View.GalleryPage">
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <Label Text="Gallery"></Label>
+        <ListView x:Name="Imagelist" ItemsSource="{Binding test}" ItemSelected="OnItemSelected"  RowHeight="350">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <ViewCell.View>
+                  <StackLayout>
+                    <Image WidthRequest="300" HeightRequest="300" Source="{Binding imageSource}" HorizontalOptions="CenterAndExpand"></Image>
+                    <Label Text="{Binding Comment}" Font="22" HorizontalOptions="CenterAndExpand" />
+                  </StackLayout>
+                </ViewCell.View>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

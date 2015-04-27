@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="TestApp\TestApp\TestApp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestApp\TestApp.iOS\SQLite_iOS.cs">
+    <Files>
+      <File FileName="TestApp\TestApp\View\ConfirmPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="TestApp\TestApp.Droid\MainActivity.cs" Line="10" Column="13" />
+      <File FileName="TestApp\TestApp\API\RestAPI.cs" Line="40" Column="21" />
+      <File FileName="TestApp\TestApp.Droid\packages.config" Line="1" Column="1" />
+      <File FileName="TestApp\TestApp.Droid\PictureManager.cs" Line="11" Column="6" />
+      <File FileName="TestApp\TestApp.Droid\SQLite_Android.cs" Line="1" Column="1" />
+      <File FileName="TestApp\TestApp.Droid\app.config" Line="1" Column="1" />
+      <File FileName="TestApp\TestApp.iOS\PictureManager.cs" Line="1" Column="1" />
+      <File FileName="TestApp\TestApp.iOS\SQLite_iOS.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
