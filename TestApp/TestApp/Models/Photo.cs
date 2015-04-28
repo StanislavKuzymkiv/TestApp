@@ -1,12 +1,13 @@
 ﻿using SQLite.Net.Attributes;
-namespace TestApp.Model
+using System.IO;
+using Xamarin.Forms;
+using XLabs.Ioc;
+using XLabs.Platform.Device;
+using XLabs.Platform.Services.IO;
+
+
+namespace TestApp.Models
 {
-    using Xamarin.Forms;
-
-    using XLabs.Ioc;
-    using XLabs.Platform.Device;
-    using XLabs.Platform.Services.IO;
-
     [Table("Photos")]
 	public class Photo
 	{
@@ -23,9 +24,10 @@ namespace TestApp.Model
         {
             get
             {
-                var device = Resolver.Resolve<IDevice>();
-                var fileStream = device.FileManager.OpenFile(ImagePath, FileMode.Open, FileAccess.Read);
-                return  ImageSource.FromStream(() => fileStream);
+				return Device.OnPlatform (
+					ImageSource.FromFile (ImagePath),
+					ImageSource.FromFile (ImagePath),             
+					ImageSource.FromStream (() => Resolver.Resolve<IDevice> ().FileManager.OpenFile (ImagePath, FileMode.Open, FileAccess.Read)));
             }
             set
             {

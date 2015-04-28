@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace TestApp.Data
 {
-    using TestApp.Model;
+    using TestApp.Models;
 
     public class ImageRepository
     {

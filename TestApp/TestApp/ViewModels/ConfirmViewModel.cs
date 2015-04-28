@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
-using TestApp.Core;
-using TestApp.View;
+using TestApp.Services;
+using TestApp.Views;
 using Xamarin.Forms;
 using XLabs.Forms.Mvvm;
 using XLabs.Platform.Services.Media;
 
-namespace TestApp.ViewModel
+namespace TestApp.ViewModels
 {
     [ViewType(typeof(ConfirmPage))]
     public class ConfirmViewModel : XLabs.Forms.Mvvm.ViewModel

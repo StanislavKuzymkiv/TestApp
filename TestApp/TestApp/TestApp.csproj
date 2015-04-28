@@ -38,25 +38,25 @@
   <ItemGroup>
     <Compile Include="API\RestAPI.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="Core\CameraManager.cs" />
-    <Compile Include="Core\DependencyServiceManager.cs" />
-    <Compile Include="Core\IPictureManager .cs" />
+    <Compile Include="Services\CameraManager.cs" />
+    <Compile Include="Services\DependencyServiceManager.cs" />
+    <Compile Include="Services\IPictureManager .cs" />
     <Compile Include="Data\ImageRepository.cs" />
     <Compile Include="Data\ISQLite.cs" />
-    <Compile Include="Model\JsonPhoto.cs" />
-    <Compile Include="Model\Photo.cs" />
+    <Compile Include="Models\JsonPhoto.cs" />
+    <Compile Include="Models\Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\ConfirmViewModel.cs" />
-    <Compile Include="View\ConfirmPage.xaml.cs">
+    <Compile Include="ViewModels\ConfirmViewModel.cs" />
+    <Compile Include="Views\ConfirmPage.xaml.cs">
       <DependentUpon>ConfirmPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\GalleryPage.xaml.cs">
+    <Compile Include="Views\GalleryPage.xaml.cs">
       <DependentUpon>GalleryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ImagePage.xaml.cs">
+    <Compile Include="Views\ImagePage.xaml.cs">
       <DependentUpon>ImagePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\StartPage.xaml.cs">
+    <Compile Include="Views\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -100,27 +100,28 @@
     <Reference Include="System.Net.Http.Primitives">
       <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="mscorlib" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\ConfirmPage.xaml">
+    <EmbeddedResource Include="Views\ConfirmPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\GalleryPage.xaml">
+    <EmbeddedResource Include="Views\GalleryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\ImagePage.xaml">
+    <EmbeddedResource Include="Views\ImagePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\StartPage.xaml">
+    <EmbeddedResource Include="Views\StartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -1,12 +1,11 @@
 ﻿using System;
-
 using Xamarin.Forms;
+using TestApp.Data;
+using TestApp.Views;
+
 
 namespace TestApp
 {
-    using TestApp.Data;
-    using TestApp.View;
-
     public class App : Application
 	{
 		public static ImageRepository repo;

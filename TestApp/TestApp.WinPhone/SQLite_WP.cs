@@ -2,15 +2,13 @@
 using System.Runtime.CompilerServices;
 using System.IO;
 using TestApp.WinPhone;
+using Windows.Storage;
+using TestApp.Data;
 
 [assembly: Xamarin.Forms.Dependency(typeof(SQLite_WP))]
 
 namespace TestApp.WinPhone
 {
-    using Windows.Storage;
-
-    using TestApp.Data;
-
     public class SQLite_WP: ISQLite
 	{
         public SQLite_WP()

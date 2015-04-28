@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using TestApp.Services;
 using Foundation;
 using UIKit;
+using XLabs.Ioc;
+using XLabs.Platform.Device;
+using XLabs.Platform.Services;
 
 namespace TestApp.iOS
 {
+   
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
@@ -23,9 +27,18 @@ namespace TestApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+			SetupIoc ();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }
+		private void SetupIoc (){
+			var container = new SimpleContainer ();
+			container.Register<IDevice> (t => AppleDevice.CurrentDevice);
+			container.Register<IDisplay> (t => t.Resolve<IDevice> ().Display);
+			container.Register<INetwork>(t=> t.Resolve<IDevice>().Network);
+			container.Register<IPictureManager> (new PictureManager());
+			Resolver.SetResolver (container.GetResolver ());
+		}
     }
 }

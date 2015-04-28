@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using XLabs.Platform.Services.Media;
 
-namespace TestApp.Core
+namespace TestApp.Services
 {
     public class CameraManager
     {

@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-namespace TestApp.Model
+namespace TestApp.Models
 {
     class JsonPhoto
     {

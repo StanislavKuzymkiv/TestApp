@@ -1,22 +1,13 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Globalization;
+using System.IO;
+using System.Threading;
+using TestApp.Services;
+using TestApp.Models;
 
-namespace TestApp.View
+namespace TestApp.Views
 {
-    using System.Globalization;
-    using System.IO;
-    using System.Threading;
-
-    using TestApp.Core;
-    using TestApp.Model;
-
-    using XLabs.Forms;
-    using XLabs.Forms.Controls;
-    using XLabs.Ioc;
-    using XLabs.Platform.Device;
-    using XLabs.Platform.Services.IO;
-    using XLabs.Platform.Services.Media;
-
     public partial class ImagePage : ContentPage
     {
         public int Ident { get; set; }

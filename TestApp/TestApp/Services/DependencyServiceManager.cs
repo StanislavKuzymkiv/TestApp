@@ -8,7 +8,7 @@ using XLabs.Ioc;
 using XLabs.Platform.Device;
 using XLabs.Platform.Services.Media;
 
-namespace TestApp.Core
+namespace TestApp.Services
 {
    
 

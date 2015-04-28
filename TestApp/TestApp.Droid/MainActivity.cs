@@ -13,11 +13,10 @@ using XLabs.Platform.Device;
 using XLabs.Platform.Services;
 using XLabs.Platform.Services.Media;
 using System.IO;
-using Android.Provider;
 
 namespace TestApp.Droid
 {
-    using TestApp.Core;
+    using TestApp.Services;
 
     [Activity (Label = "TestProject.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : XFormsApplicationDroid

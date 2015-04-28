@@ -1,12 +1,14 @@
 ﻿using Xamarin.Forms;
-namespace TestApp.Core
+namespace TestApp.Services
 {
+    using System.IO;
 
     public interface IPictureManager 
 	{
         void DeletePicture(string imagePath);
 
-       string  GetImagePath(string imagePath);
+        Stream GetPictureStream(string path);
+
 	}
 }
 

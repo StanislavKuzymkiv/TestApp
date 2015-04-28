@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
-using Xamarin.Forms;
-
 using XLabs.Ioc;
 using XLabs.Platform.Device;
 using XLabs.Platform.Services.Media;
-namespace TestApp.View
-{
-    using TestApp.Core;
+using Xamarin.Forms;
+using TestApp.Services;
 
+namespace TestApp.Views
+{
     public partial class StartPage : ContentPage
     {
         private IMediaPicker _mediaPicker;
@@ -27,14 +25,14 @@ namespace TestApp.View
         {
             _manager = new CameraManager(_mediaPicker);
             file = await _manager.TakePhotoFromCamera();
-            await Navigation.PushAsync(new ConfirmPage(file));
+			if (file != null) {
+				await Navigation.PushAsync (new ConfirmPage (file));
+			}
         }
         private void ShowPhotoList(object sender, EventArgs e)
         {
             Navigation.PushAsync(new GalleryPage());
         }
-
-
     }
 }
 

@@ -6,15 +6,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
+using TestApp.Services;
+using XLabs.Ioc;
+using XLabs.Platform.Device;
+using XLabs.Platform.Services;
+using XLabs.Platform.Services.Media;
 
 namespace TestApp.WinPhone
 {
-    using TestApp.Core;
-    using XLabs.Ioc;
-    using XLabs.Platform.Device;
-    using XLabs.Platform.Services;
-    using XLabs.Platform.Services.Media;
 
     public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {

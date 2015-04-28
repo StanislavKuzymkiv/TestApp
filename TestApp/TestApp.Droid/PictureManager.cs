@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using System.IO;
-using TestApp.Core;
+using TestApp.Services;
 
 [assembly: Xamarin.Forms.Dependency(typeof(TestApp.Droid.PictureManager))]
 namespace TestApp.Droid
@@ -17,15 +17,14 @@ namespace TestApp.Droid
         public void DeletePicture(string path)
         {
 
-            File.Delete(GetImagePath(path));
+            File.Delete(path);
         }
-
-        public string GetImagePath(string path)
+        public Stream GetPictureStream(string path)
         {
-            var imageName = Path.GetFileName(path);
-
-            return imageName;
+            var fileStream = File.Open(path, FileMode.Open, FileAccess.Read);
+            return fileStream;
         }
+
     }
 }
 
